@@ -1,0 +1,23 @@
+.header {
+    height: 6rem;
+    width: 100vw;
+    background-color: rgb(194 156 224);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    align-items: center;
+    .app-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        a {
+            cursor: pointer;
+            font-size: 1.25rem;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a.active {
+            color: rgb(135 15 230);
+        }
+    }
+}

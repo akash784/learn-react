@@ -1,0 +1,29 @@
+.content-table {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    .table-head {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        align-content: center;
+        justify-content: space-around;
+        height: 2.5rem;
+        background-color: #80808070;
+        >div {
+            text-align: center;
+        }
+    }
+    .table-content {
+        display: flex;
+        flex-direction: column;
+        .content-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+            align-items: center;
+            justify-content: space-around;
+            >div[role="id"], [role="userId"], [role="postId"] {
+                text-align: center;
+            }
+        }
+    }
+}
