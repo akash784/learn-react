@@ -1,0 +1,56 @@
+.task-container{
+    padding: 2rem;
+    display: grid;
+    column-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    .task-form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        >input {
+            height: 2rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #8080806b;
+        }
+        button {
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            background-color: #870fe6a1;
+            color: white;
+        }
+    }
+    .task-table {
+        border: 2px solid grey;
+        line-height: 1rem;
+        .table-head {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+            align-content: center;
+            justify-content: space-around;
+            height: 2rem;
+            background-color: #870fe6a1;
+            color: white;
+            font-weight: 500;
+            >div {
+                text-align: center;
+            }
+        }
+        .table-content {
+            display: flex;
+            flex-direction: column;
+            .content-row {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+                align-items: center;
+                grid-gap: 0.5rem;
+                justify-content: space-around;
+                border-top: 1px solid black;
+                padding: 4px;
+                text-align: center;
+            }
+        }
+    }
+}

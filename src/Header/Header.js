@@ -5,7 +5,8 @@ const TABS = {
     HOME : 'home',
     POSTS: 'posts',
     COMMENTS: 'comments',
-    TODOS: 'todos'
+    TODOS: 'todos',
+    TASKMANAGER: 'task'
 }
 export default function Header({changeTab, activeTab}) {
     function handleTab(e) {
@@ -22,6 +23,7 @@ export default function Header({changeTab, activeTab}) {
                     <a className={activeTab == TABS.POSTS ? 'active' : ''} id={TABS.POSTS}  onClick={handleTab}>Posts</a>
                     <a className={activeTab == TABS.COMMENTS ? 'active' : ''} id={TABS.COMMENTS}  onClick={handleTab}>Comments</a>
                     <a className={activeTab == TABS.TODOS ? 'active' : ''} id={TABS.TODOS} onClick={handleTab}>ToDos</a>
+                    <a className={activeTab == TABS.TASKMANAGER ? 'active' : ''} id={TABS.TASKMANAGER} onClick={handleTab}>Task Manager</a>
                 </div>
             </div>
         </>

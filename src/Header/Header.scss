@@ -1,7 +1,7 @@
 .header {
     height: 6rem;
     width: 100vw;
-    background-color: rgb(194 156 224);
+    background-color: #c29ce0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     align-items: center;
@@ -17,7 +17,7 @@
             text-decoration: none;
         }
         a.active {
-            color: rgb(135 15 230);
+            color:#870fe6;
         }
     }
 }

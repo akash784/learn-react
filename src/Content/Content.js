@@ -4,6 +4,7 @@ import './Content.scss';
 
 export default function Content({selectedTab}) {
     const [items, setItems] = useState([]);
+    const [loader, setLoader] =  useState(true);
 
     useEffect(() => {
         if(selectedTab != 'home') {
@@ -11,6 +12,7 @@ export default function Content({selectedTab}) {
             .then(response => response.json())
             .then(json => {
                 setItems(json.slice(0,15));
+                setLoader(false);
             });
         } else {
             setItems([]);
@@ -19,8 +21,8 @@ export default function Content({selectedTab}) {
 
     return (
         <>
-            <div class="content">
-                <ContentTable list={items} />
+            <div className="content">
+                { loader ? <h2>...LOADING</h2> : <ContentTable list={items} /> }
             </div>
         </>
     );
